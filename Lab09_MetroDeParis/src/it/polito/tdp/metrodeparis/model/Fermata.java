@@ -41,12 +41,21 @@ public class Fermata {
 	public void setCoords(LatLng coords) {
 		this.coords = coords;
 	}
-
+	
+	/* (non-Javadoc)
+	 * @see java.lang.Object#hashCode()
+	 */
 	@Override
 	public int hashCode() {
-		return ((Integer) idFermata).hashCode();
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + idFermata;
+		return result;
 	}
 
+	/* (non-Javadoc)
+	 * @see java.lang.Object#equals(java.lang.Object)
+	 */
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -60,7 +69,7 @@ public class Fermata {
 			return false;
 		return true;
 	}
-	
+
 	@Override
 	public String toString() {
 		return nome;
